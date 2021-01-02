@@ -24,20 +24,7 @@ int main(){
 			
 			cout<<--value<<'\t';
 		}
-
-
-		// for(int j=0;j<ntimes/2 && i>n/2+1;j++){
-		// 	cout<<--value<<'\t';
-		// }
-
-		// for(int j=0;j<=ntimes/2 && i>n/2+1;j++){
-		// 	value++;
-		// 	cout<<value<<'\t';
-			
-		// }
 		
-
-
 		cout<<endl;
 
 		if(i<=n/2){
