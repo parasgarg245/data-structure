@@ -20,21 +20,6 @@ int  main(){
 		
 		for(int i=0;i<n;i++){
 
-				// int mid=low +(high-low)/2;
-				// cout<<mid<<endl;
-				// int val=s[i]-'0';
-
-				// if(val){
-				// 	low=mid+1;
-				// }else
-				// 	high=mid;
-
-				// if((i!=0 && i%4==0 && low==high) || i==n-1 ){
-				// 	cout<<arr[mid];
-				// 	low=0;
-				// 	high=15;
-					
-				// }
 			int mid=low+(high-low)/2;
 
 			int val=s[i]-'0';
