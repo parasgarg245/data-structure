@@ -1,16 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void allindex(int arr[],int x,int idx,int n){
+vector<int> allindex(int arr[],int x,int idx,int fsf,int n){
 	if(idx==n){
-		cout<<" ";
-		return ;
+		vector<int>temp(fsf);
+		return temp ;
 	}
-	if(arr[idx]==x){
-		cout<<idx<<endl;
+	
+	vector<int>temp;
+	if(x==arr[idx]){
+		temp=allindex(arr,x,idx+1,fsf+1,n);
+		temp[fsf]=idx;
+	}else{
+		temp=allindex(arr,x,idx+1,fsf,n);
+		return temp;
 	}
-	allindex(arr,x,idx+1,n);
-
+	return temp;
 }
 
 int main(){
@@ -25,5 +30,11 @@ int main(){
 	int x;
 	cin>>x;
 
-    allindex(arr, x, 0,n);
+    vector<int>v=allindex(arr, x, 0,0,n);
+    if(v.size()==0)
+    	cout<<" ";
+
+    for(int i=0;i<v.size();i++){
+    	cout<<v[i]<<endl;
+    }
 }
