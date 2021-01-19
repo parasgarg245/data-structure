@@ -22,38 +22,40 @@ int main() {
 	    
 	    queue<int>q;
 	    
-	    while(end<n){
-		    
-		    if(end-start+1<k){
-		        if(arr[end]<0){
-		            q.push(arr[end]);
-		        }
-		        end++;
-		    }
-		    
-		    if(end-start+1==k){
-		        if(q.empty()){
-		            cout<<0<<" ";
-		        }
-		        
-		        else{
-		            cout<<q.front()<<" ";
-		            
-		            end++;
-		            if(arr[end]<0){
-		                q.push(arr[end]);
-		            }
-		            
-		            if(arr[start]<0){
-		                q.pop();
-		            }
-		            start++;
-		            
-		        }
-		        
-		        
-		    }
+	  
+	    
+	     while(end-start+1<k){
+	        if(arr[end]<0){
+	            q.push(arr[end]);
+	        }
+	        end++;
 	    }
+	    if(arr[end]<0){
+	        q.push(arr[end]);
+	    }
+	     while(end<n){
+	    if(end-start+1==k){
+	       
+	        if(q.empty()){
+	            cout<<0<<" ";
+	        }
+	        
+	        else{
+	            cout<<q.front()<<" ";
+	        }
+	          end++;
+	            if(arr[end]<0){
+	                q.push(arr[end]);
+	            }
+	            
+	            if(arr[start]<0){
+	                q.pop();
+	            }
+	            start++;
+	        
+	    }
+	    }
+	    cout<<endl;
 	}
 	
 	return 0;
