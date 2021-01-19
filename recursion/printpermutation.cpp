@@ -12,8 +12,8 @@ void printPermutations(string str, string asf){
       
    for(int i=0;i<str.length();i++)
    {
-       char x=str[i];
-       string temp=str;
+       char x=str[i]; //////////////////// 
+       string temp=str; ///////////just remove that character from string and permute on the next level
        
        printPermutations(temp.erase(i,1),asf+x);
    }
