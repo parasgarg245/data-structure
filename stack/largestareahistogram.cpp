@@ -56,13 +56,14 @@ int maxhistogramrectange(vector<int>height){
 		int area=width*height[i];
 
 		ans=max(ans,area);
+		
 
 
 	}
 	return ans;
 }
 
-
+	
 
 
 
