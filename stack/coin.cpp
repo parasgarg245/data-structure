@@ -1,7 +1,7 @@
 	#include<bits/stdc++.h>
 using namespace std;
 
-int ways(int& coin ,int *arr,int n ){
+int ways(int coin ,int *arr,int n ){
 	if(coin==0){
 		return 1;
 	}
